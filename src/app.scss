@@ -1,0 +1,623 @@
+/*!
+ * Custom Bootstrap, based on Twitter Bootstrap
+ * This styleguide imports all scss files from original bootstrap
+ * and overrides only those that are modified with new custom files
+ */
+
+// Main Scss
+
+//Bootstrap
+
+// And this
+@import './styles/bootstrap';
+
+// body {
+//     background-image: url('./images/header-bg.png');
+// }
+
+textarea {
+  background-clip: padding-box;
+  border: 1px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 100%;
+}
+
+select {
+  background: none !important;
+}
+
+.breadcrumb {
+  background: transparent;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: '>';
+}
+
+.font-spacing {
+  letter-spacing: .3em;
+}
+.bg-full {
+  background-size: cover;
+  background-position: center center;
+}
+.bg-mountain {
+  background-image: url('./images/section2-bg.png');
+}
+.bg-computer {
+  background-image: url('./images/section1-bg.png');
+}
+.bg-waves {
+  background-image: url('./images/section3-bg.png');
+}
+.bg-bubbles {
+  background-image: url('./images/bubbles.png');
+  background-position: top center;
+}
+.bg-pattern {
+  background-image: url('./images/header-pattern.png');
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+.view {
+  min-height: 90vh;
+}
+
+hr {
+  border: 1px solid #444448;
+}
+
+
+//** Custom Card **//
+.custom__card {
+  background: white;
+  border: 1px solid #444448;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  padding: 20px 15px;
+  .amounts {
+    small {
+      margin-right: 80px;
+    }
+  }
+}
+.custom-card__content-left,
+.custom-card__content-right {
+  display: inline-block;
+}
+.custom-card__content-left {
+  div {
+    display: inline-block;
+  }
+  img {
+    height: 40px;
+    vertical-align: initial;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+.custom-card__content-right {
+  p {
+    display: inline-block;
+    width: 80%;
+  }
+}
+.left-arrow {
+  float: right;
+  position: relative;
+  width: 15%;
+  &:after {
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0;
+    content: '';
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    margin-top: 50%;
+    right: 0;
+    transform: rotate(45deg);
+    vertical-align: top;
+    width: 20px;
+  }
+}
+
+//** Login & Security **//
+.log-security {
+  form {
+    small {
+      color: black;
+      font-weight: bold;
+    }
+  }
+  .card {
+    min-height: 800px;
+  }
+  .contact-bar {
+    img {
+      height: 20px;
+    }
+    small {
+      color: #79593d;
+    }
+  }
+  .nav-tabs {
+    border-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    .nav-link {
+      color: #495057;
+      background: #e3e3e2;
+      border-radius: 10px;
+      height: 89px;
+
+      &.active {
+        background: #c9caca;
+      }
+
+      img {
+        height: 30px;
+      }
+
+      small:first-child {
+       display: block; 
+      }
+    }
+  }
+  .account-title {
+    background: #f6f9fa;
+    position: relative;
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    li {
+      color: #cbcccc;
+      flex-basis: auto;
+    }
+    li,
+    .edit {
+      color: #cbcccc;
+    }
+
+    .edit {
+      position: absolute;
+      right: 0;
+      top: 0;
+      img {
+        height: 20px;
+      }
+    }
+  }
+  .account-settings__delete {
+    button {
+      vertical-align: text-bottom;
+    }
+    small {
+      display: block;
+      &:first-child {
+        font-weight: bold;
+      }
+    }
+    .content {
+      display: inline-block;
+    }
+  }
+  .form-group {
+    display: block;
+  }
+}
+
+/** Modal Withdrawal **/ 
+.modal-withdrawal {
+  .modal-body {
+    div {
+      border-bottom: 2px dashed #a1a1a1;
+    }
+  }
+  .modal-content {
+    background: #f8f8f8;
+    border-radius: 0;
+    p {
+      color: #636363;
+      display: inline-block;
+      margin: 0;
+      width: auto;
+    }
+    .easybit-logo {
+      img {
+        height: 40px;
+      }
+    }
+    .headline {
+      color: #4791dd;
+      float: right;
+    }
+  }
+  .modal-title {
+    border-bottom: 2px dashed #a1a1a1;
+    p {
+      color: #7b7b7b;
+    }
+    .btn-print {
+      color: #000;
+      float: right;
+      font-weight: 700;
+      img {
+        height: 20px;
+        margin: -3px 0 0 3px;
+      }
+    }
+  }
+}
+
+//** Cad Wire Transfer **//
+.cad-wire-transfer {
+  form {
+    border: 1px solid #444448;
+    margin-bottom: 30px;
+    padding: 20px; 
+  }
+  ul {
+    padding: 0 20px;
+  }
+  .form-row__amount {
+    img {
+      vertical-align: -webkit-baseline-middle;
+      width: 5%;
+    }
+    input {
+      float: right;
+      width: 95%;
+    }
+    .btn {
+      width: 100%;
+    }
+  }
+  .form-row__message {
+    small {
+      color: #91908F;
+    }
+  }
+  .tab-title {
+    h4,
+    h5 {
+      display: inline-block
+    }
+    h5 {
+      font-weight: 300;
+    }
+    position: relative;
+  }
+  .custom__card {
+    background: transparent;
+    border: none;
+    margin-bottom: 0;
+  }
+  .custom-card__content-right {
+    width: 100%;
+  }
+  .memo {
+    position: relative;
+    .btn {
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      right: 0;
+    }
+  }
+  .redo-arrow {
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    top: 50%;
+
+    img {
+      background: #FFC40F;
+      border-radius: 50%;
+      height: 40px;
+      padding: 5px 5px;
+    }
+
+    small {
+      font-weight: bold;
+      margin-right: 15px;
+    }
+  }
+}
+
+
+//** Transactions page **//
+.transactions {
+  select {
+    background: url(./images/down-chevron.svg) no-repeat right center;
+    background-size: 10px;
+    border: none;
+    box-shadow: none;
+    display: inline-block;
+    -webkit-appearance: none; /* for webkit browsers */
+    -moz-appearance: none; /* for firefox */
+    appearance: none; /* for modern browsers */
+    outline: 0;
+    width: auto;
+    
+    &::-ms-expand {
+      display:none;
+   }
+  }
+  .bitcoin_logo {
+    height: 40px;
+    margin-left: 5px;
+  }
+  .btn-export {
+    float: right;
+  }
+  .card-body {
+    min-height: 200px;
+  }
+  .card-header {
+    border: none;
+  }
+  .form-control:focus {
+    border: none;
+    border-color: none;
+    box-shadow: none;
+  }
+  .no-results {
+    font-weight: 300;
+  }
+  .select-date {
+    width: 90%;
+  }
+  .select-type {
+    width: 70px;
+  }
+  .select-day {
+    width: 25px;
+  }
+  .select-month {
+    width: 40px;
+  }
+  .select-year {
+    width: 52px;
+  }
+  .select-account__container {
+    p {
+      display: inline-block;
+    }
+  }
+  .select-range__container {
+    border: 1px solid #444448;
+    .select-group__container {
+      float: right;
+    }
+    .select-group {
+      p {
+        display: inline-block;
+      }
+      p,
+      select {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.transactions-tab {
+  .card {
+    .card {
+      box-shadow: none;
+    }
+  }
+  .nav {
+    .btn {
+      font-weight: bold;
+    }
+  }
+  .nav-tabs {
+    border-bottom: 2px solid #444448;
+  }
+}
+
+//** Wallet Page Title **//
+.wallet-title {
+  img {
+    height: 40px;
+    vertical-align: top;
+  }
+  h3 {
+    display: inline-block;
+  }
+}
+
+//** WALLETS: BITCOIN TAB CONTENT **//
+.btc-tabs-content {
+  input {
+    box-shadow: none;
+    font-weight: bold;
+  }
+  .btc-buy, 
+  .btc-sell {
+    input {
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+    }
+    .card {
+      background: none;
+      box-shadow: none;
+      min-height: 400px;
+    }
+    .card-header {
+      h4 {
+        display: inline-block;
+        margin: 0 3px;
+      }
+      .bitcoin-logo__right,
+      .shopping-icon {
+        height: 25px;
+      }
+
+      .bitcoin-logo__right {
+        vertical-align: baseline;
+      }
+      .shopping-icon {
+        vertical-align: inherit;
+      }
+    }
+    .card-header__content-left {
+      display: inline-block;
+    }
+    .card-header__content-right {
+      float: right;
+    }
+    .custom-select {
+      background: white;
+    }
+  }
+  .btc-deposit,
+  .btc-withdrawal {
+    small {
+      display: block;
+      line-height: 25px;
+    }
+  }
+  .btc-deposit__disclaimer {
+    color: #c39b6e;
+    &:before {
+      content:"• ";
+    }
+  }
+  .btc-deposit__address-btns {
+    text-align: right;
+  }
+  .btc-notes {
+    ul {
+      padding-left: 20px;
+    }
+  }
+  .btn-qr,
+  .btn-copy {
+    color: #000;
+    height: 37.5px;
+    img {
+      height: 100%;
+      vertical-align: bottom;
+      width: auto;
+    }
+  }
+  .btc-withdrawal {
+    button {
+      color: white;
+      font-weight: 300;
+    }
+    .total {
+      p {
+        display: inline-block;
+        width: 120px;
+      }
+      span {
+        float: right;
+        font-weight: bold;
+      }
+    }
+    .transaction-fee {
+      span {
+        color: red;
+      }
+    }
+    .total {
+      p {
+        text-align: right;
+      }
+    }
+  }
+
+  .btc__transactions {
+    min-height: 300px;
+    .card-header {
+      border-left: 0;
+    }
+  }
+}
+
+//** WALLETS: CAD TAB CONTENT **//
+.cad-tabs-content,
+.transactions {
+  .card-header {
+    border-left: none;
+  }
+}
+.btc-withdrawal,
+.cad-withdrawal {
+  .form-label {
+    display: inline-block;
+  }
+  .form-input {
+    float: right;
+  }
+}
+
+//** UPLOAD INPUT FILE **//
+.inputfile + label {
+  border-radius: 5px;
+  font-size: 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.625rem 1.25rem;
+  width: 100%;
+}
+
+.inputfile{
+  display: none;
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile + label svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+}
+
+.inputfile-1 + label {
+  color: #000;
+  background-color: #FFC40F;
+}
+
+.inputfile-1:focus + label,
+.inputfile-1.has-focus + label,
+.inputfile-1 + label:hover {
+  background-color: #e8af00;
+}
+
+.img-preview {
+  border: 1px solid #444448;
+  border-radius: 5px;
+  height: 300px;
+  overflow: hidden;
+  padding: 20px 20px;
+  position: relative;
+
+  h5,
+  img {
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    top: 50%;
+    position: absolute;
+  }
+  img {
+    height: auto;
+    width: 100%;
+  }
+}

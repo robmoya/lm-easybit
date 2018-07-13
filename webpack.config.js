@@ -112,6 +112,12 @@ module.exports = {
       template: './src/log-security-name.html',
       filename: 'log-security-name.html'
     }),
+    new HtmlWebpackPlugin({
+      title: 'Contact',
+      hash: true,
+      template: './src/contact.html',
+      filename: 'contact.html'
+    }),
     // new HtmlWebpackPlugin({
     //   title: 'Buy',
     //   hash: true,

@@ -56,6 +56,11 @@ select {
   background-image: url('./images/bubbles.png');
   background-position: top center;
 }
+.bg-skyline {
+  background-image: url('./images/skyline.jpg');
+  background-position: top center;
+  background-repeat: repeat;
+}
 .bg-pattern {
   background-image: url('./images/header-pattern.png');
   background-repeat: repeat;
@@ -556,6 +561,72 @@ hr {
   }
   .form-input {
     float: right;
+  }
+}
+
+//** CONTACT PAGE **//
+.contact-content {
+  .card {
+    background: rgba(0, 0, 0, .4);
+    color: white;
+  }
+  .card-header {
+    background: rgba(39,17,0, .5);
+    border: none;
+    .contact-email,
+    .location-info {
+      position: relative;
+    }
+
+    .contact-email__detail,
+    .location-info__detail {
+      left: 130px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .location-info__image,
+    .contact-email__image {
+      background: white;
+      border: 2px solid #f7c645;
+      border-radius: 50%;
+      display: inline-block;
+      height: 100px;
+      position: relative;
+      width: 100px;
+
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 60%
+      }
+    }
+  }
+
+  .card-body {
+    input,
+    textarea {
+      background: rgba(153, 153, 153, .9);
+      border: none;
+      &::placeholder {
+        color: white;
+      }
+      &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+    }
+
+    textarea {
+      min-height: 150px;
+    }
+
+    .right-chevron {
+      height: 20px;
+    }
   }
 }
 

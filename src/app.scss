@@ -110,7 +110,13 @@ hr {
     width: 80%;
   }
 }
+.left-arrow__container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
 .left-arrow {
+  color: #000;
   float: right;
   position: relative;
   width: 15%;
@@ -320,6 +326,10 @@ hr {
     transform: translateY(-50%);
     top: 50%;
 
+    a {
+      text-decoration: none;
+    }
+
     img {
       background: #FFC40F;
       border-radius: 50%;
@@ -328,6 +338,7 @@ hr {
     }
 
     small {
+      color: #000;
       font-weight: bold;
       margin-right: 15px;
     }

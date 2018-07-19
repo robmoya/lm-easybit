@@ -170,24 +170,15 @@
 
                     <ul class="nav nav-tabs mb-2" id="myTab" role="tablist">
                       <li class="nav-item">
-                        <a class="nav-link active" id="cadBuy-tab" data-toggle="tab" href="#cadBuy" role="tab" aria-controls="cadBuy" aria-selected="true">BUY</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="cadSell-tab" data-toggle="tab" href="#cadSell" role="tab" aria-controls="cadSell" aria-selected="false">SELL</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="cadDeposit-tab" data-toggle="tab" href="#cadDeposit" role="tab" aria-controls="cadDeposit" aria-selected="false">DEPOSIT</a>
+                        <a class="nav-link active" id="cadDeposit-tab" data-toggle="tab" href="#cadDeposit" role="tab" aria-controls="cadDeposit" aria-selected="false">DEPOSIT</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" id="cadWithdrawal-tab" data-toggle="tab" href="#cadWithdrawal" role="tab" aria-controls="false" aria-selected="false">WITHDRAWAL</a>
                       </li>
                     </ul>
                     <div class="tab-content cad-tabs-content">
-                      <div class="tab-pane cad-buy active" id="cadBuy" role="tabpanel" aria-labelledby="cadBuy-tab">1 BUY</div>
-                      <div class="tab-pane cad-sell" id="cadSell" role="tabpanel" aria-labelledby="cadSell-tab">2 SELL</div>
-
                       <!-- cad-desposit tab -->
-                      <div class="tab-pane cad-deposit" id="cadDeposit" role="tabpanel" aria-labelledby="cadDeposit-tab">
+                      <div class="tab-pane cad-deposit active" id="cadDeposit" role="tabpanel" aria-labelledby="cadDeposit-tab">
                         <div class="cad-deposit__container">
                           <div>
                             <h4 class="mt-4">CAD DEPOSIT</h4>
@@ -207,10 +198,12 @@
                                 <p>
                                   Deposit Funds using Interac E-Transfer, log into your online banking to start the transfer
                                 </p>
-                                <span class="left-arrow"></span>
+                                <a class="left-arrow__container" href="/deposit-cad-e-transfer.html">
+                                  <span class="left-arrow"></span>
+                                </a>
                                 <div class="amounts">
-                                  <small class="text-primary">Min: $1000</small>
-                                  <small class="text-primary">Max: $3000</small>
+                                  <small class="text-primary">Min: $1000.00</small>
+                                  <small class="text-primary">Max: $3000.00</small>
                                 </div>
                               </div>
                             </div>
@@ -221,18 +214,20 @@
                               <div class="col-sm-4 custom-card__content-left">
                                 <img src="./images/dollar.svg" alt="">
                                 <div>
-                                  <p mb-1>Interac E-Transfer</p>
+                                  <p mb-1>Wire-Transfer</p>
                                   <small>1 - 3 Days</small>
                                 </div>
                               </div>
                               <div class="col-sm-8 custom-card__content-right">
                                 <p>
-                                  Deposit Funds using Interac E-Transfer, log into your online banking to start the transfer
+                                  Deposit Funds using Wire Transfer
                                 </p>
-                                <span class="left-arrow"></span>
+                                <a class="left-arrow__container" href="/deposit-cad-wire-transfer.html">
+                                  <span class="left-arrow"></span>
+                                </a>
                                 <div class="amounts">
-                                  <small class="text-primary">Min: $1000</small>
-                                  <small class="text-primary">Max: $3000</small>
+                                  <small class="text-primary">Min: $3000.00</small>
+                                  <small class="text-primary">Max: $100,000.00</small>
                                 </div>
                               </div>
                             </div>
